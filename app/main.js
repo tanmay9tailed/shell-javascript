@@ -13,7 +13,10 @@ const promt = () => {
     if(commandArr[0]==="exit"){
       process.exit(+commandArr[1]) ;
     }
-    console.log(`${answer}: command not found`)
+    else if(commandArr[0]==="echo"){
+      console.log(commandArr[1]?.trim("\"") ?? "");
+    }
+    else console.log(`${answer}: command not found`)
     promt();
   });
 }
