@@ -14,7 +14,9 @@ const promt = () => {
       process.exit(+commandArr[1]) ;
     }
     else if(commandArr[0]==="echo"){
-      console.log(commandArr[1]?.trim("\"") ?? "");
+      const args = commandArr?.slice(1).join(" ") ?? "";
+
+      console.log(args);
     }
     else console.log(`${answer}: command not found`)
     promt();
