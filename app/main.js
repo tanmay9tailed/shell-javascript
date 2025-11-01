@@ -9,8 +9,9 @@ const rl = readline.createInterface({
 
 const promt = () => {
   rl.question("$ ", (answer) => {
-    if(answer.split(" ")[0]==="exit"){
-      return ;
+    const commandArr = answer.split(" ");
+    if(commandArr[0]==="exit"){
+      process.exit(+commandArr[1]) ;
     }
     console.log(`${answer}: command not found`)
     promt();
