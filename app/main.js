@@ -18,6 +18,13 @@ const promt = () => {
 
       console.log(args);
     }
+    else if(commandArr[0]==="type"){
+      if(commandArr[1]==="exit" || commandArr[1]==="echo" || commandArr[1]==="type"){
+        console.log(`${commandArr[1]} is a shell builtin`)
+      }else{
+        console.log(`${commandArr[1]}: not found`)
+      }
+    }
     else console.log(`${answer}: command not found`)
     promt();
   });
