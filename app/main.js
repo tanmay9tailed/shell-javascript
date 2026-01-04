@@ -11,7 +11,7 @@ const promt = () => {
   rl.question("$ ", (answer) => {
     const commandArr = answer.split(" ");
     if(commandArr[0]==="exit"){
-      process.exit(+commandArr[1]) ;
+      process.exit(0) ;
     }
     else if(commandArr[0]==="echo"){
       const args = commandArr?.slice(1).join(" ") ?? "";
